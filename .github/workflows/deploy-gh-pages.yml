@@ -23,6 +23,8 @@ jobs:
 
       - name: Build
         run: | 
+          hugo mod tidy
+          hugo mod get -u
           hugo --minify
 
       - name: Deploy
